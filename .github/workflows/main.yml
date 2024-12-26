@@ -49,5 +49,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/        # Changed from build/ to out/
-          server-dir: /home/velokasj/blogs.velocast.org/
           dangerous-clean-slate: true
