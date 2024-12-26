@@ -23,15 +23,12 @@ function about({ topics }) {
         <h2 className="text-3xl font-semibold text-gray-700 py-4 dark:text-gray-200">
           Hi,{" "}
           <span className="bg-indigo-400 text-white rounded px-1 dark:bg-indigo-500">
-            I’m Soumyajit
+            I’m Priyam
           </span>{" "}
           . Nice to meet you.
         </h2>
         <p className="text-gray-600 mt-4 dark:text-indigo-200">
-          I am a self taught developer currently pursuing IMSC in Maths and
-          Computing in BIT Mesra. My field of Interest's are building new Web
-          Technologies and Products and also in areas related to Deep Learning
-          and Natural Launguage Processing.
+        A visionary software engineer dedicated to democratizing data analytics and AI through innovative solutions. Track record of transformative results, including 40% improvement in AI system efficiency and 30% reduction in project timelines through strategic automation. Technical mastery spans Python, Typescript, Java, Rust, AWS, GCP and Docker, complemented by expertise in SQL and machine learning. Passionate about converting complex technological challenges into user-friendly solutions that drive business value. A forward-thinking professional committed to emerging tech trends and collaborative innovation. Contact: priyamshah112@gmail.com.
         </p>
 
         <div className="text-center pt-8">
@@ -40,7 +37,7 @@ function about({ topics }) {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://soumyajit.vercel.app/"
+              href="https://priyam.velocast.org/"
             >
               See My Works
             </a>
@@ -52,7 +49,7 @@ function about({ topics }) {
               className="twitter-follow-button"
               rel="noopener noreferrer"
               target="_blank"
-              href="https://twitter.com/soumyajit4419"
+              href="https://twitter.com/priyamshah112"
             >
               Follow Me
             </a>

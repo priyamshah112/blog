@@ -1,5 +1,5 @@
 {
-  "name": "bits-of-code",
+  "name": "Blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@firebase/analytics": "^0.10.10",
     "bcryptjs": "^2.4.3",
     "firebase": "^9.6.8",
     "firebase-admin": "^10.0.2",

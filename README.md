@@ -1,9 +1,9 @@
-## Bits-0f-C0de
+## Velocast
 
 ## Writing own blogs made easier for everyone!
 
 <h2 align="center">
-  <a href="https://soumyajitblogs.vercel.app/" target="_blank">soumyajitblogs.vercel.app</a>
+  <a href="https://blogs.velocast.org/" target="_blank">blogs.velocast.org</a>
 </h2>
 
 <div align="center">
@@ -20,16 +20,9 @@
 
 </center>
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Bits-0f-C0de/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Bits-0f-C0de/issues">Request Feature</a>
-</h3>
-
 ## Built With
 
-My personal blogpage <a href="http://blogs.soumya-jit.tech/" target="_blank">blogs.soumyajit.tech</a> which features some of my developer blog posts and experiences.<br/>
+My personal blogpage <a href="http://blogs.velocast.org/" target="_blank">blogs.velocast.org</a> which features some of my developer blog posts and experiences.<br/>
 
 This project was built using these technologies.
 
@@ -75,4 +68,4 @@ To write your own blogs create a markdown file in `_content` folder with the spe
 
 Give a ⭐ if you like this website!
 
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+<a href="https://www.buymeacoffee.com/priyamshah112" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
