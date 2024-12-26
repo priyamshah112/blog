@@ -30,7 +30,8 @@ jobs:
           echo NEXT_PUBLIC_FIREBASE_SENDER_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_SENDER_ID }} >> .env
           echo NEXT_PUBLIC_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }} >> .env
           echo NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }} >> .env
-
+          cat .env
+          
       - name: 🔨 Install Dependencies
         run: npm install
         env:
