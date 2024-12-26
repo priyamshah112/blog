@@ -30,7 +30,6 @@ jobs:
           echo NEXT_PUBLIC_FIREBASE_SENDER_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_SENDER_ID }} >> .env
           echo NEXT_PUBLIC_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }} >> .env
           echo NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }} >> .env
-          cat .env
 
       - name: 🔨 Install Dependencies
         run: npm install
@@ -38,7 +37,7 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
 
       - name: 🏗 Build Project
-        run: npm run build && npm run export
+        run: npm run build
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
 
@@ -48,5 +47,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: out/        # Changed from build/ to out/
+          local-dir: ./ 
+          server-dir: /blogs.velocast.org/
           dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
