@@ -1,27 +1,22 @@
 name: 🚀 Blogs Build and Deploy
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build-and-deploy:
     name: 🎉 Build and Deploy
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Check out the repository
       - name: 🚚 Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '21' # Ensure this matches your project's Node.js version
+          node-version: '21'
           cache: 'npm'
-          
+
       - name: 'Create .env file'
         run: |
           touch .env
@@ -35,24 +30,22 @@ jobs:
           echo NEXT_PUBLIC_FIREBASE_SENDER_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_SENDER_ID }} >> .env
           echo NEXT_PUBLIC_FIREBASE_APP_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }} >> .env
           echo NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${{ secrets.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID }} >> .env
-          cat .env
 
-      # Step 3: Install dependencies
       - name: 🔨 Install Dependencies
         run: npm install
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
 
-      # Step 4: Build the project
       - name: 🏗 Build Project
-        run: npm run build
+        run: npm run build && npm run export
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
 
-      # Step 5: Deploy to FTP server
       - name: 📂 Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build/ # Corrected directory for React builds
+          local-dir: out/        # Changed from build/ to out/
           dangerous-clean-slate: true
