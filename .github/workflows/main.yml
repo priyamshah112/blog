@@ -1,0 +1,43 @@
+name: 🚀 Blogs Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    name: 🎉 Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: 🚚 Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21' # Ensure this matches your project's Node.js version
+          cache: 'npm'
+
+      # Step 3: Install dependencies
+      - name: 🔨 Install Dependencies
+        run: npm install
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+
+      # Step 4: Build the project
+      - name: 🏗 Build Project
+        run: npm run build
+
+      # Step 5: Deploy to FTP server
+      - name: 📂 Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build/ # Corrected directory for React builds
+          dangerous-clean-slate: true
